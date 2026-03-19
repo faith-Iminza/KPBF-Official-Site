@@ -243,25 +243,25 @@
         <h1 class="display-5 mb-5">Partnership Opportunities</h1>
         </div>
         <section class="partners">
-            <div class="card">
+            <div class="partner-card">
                 <div class="card-inner">
                     <div class="card-front">Event Sponsorship</div>
                     <div class="card-back">Sponsor national championships, leagues, and major tournaments.They Include:Event naming rights, Venue and table branding, Livestream mentions and On-site brand activations. </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="partner-card">
                 <div class="card-inner">
                     <div class="card-front">Team Kenya Sponsorship</div>
                     <div class="card-back">Support the national teams representing Kenya in regional and global competitions. They Includes:Jersey branding, Training and travel support, Athlete ambassador programs and International exposure</div>
                 </div>
             </div>
-            <div class="card">
+            <div class="partner-card">
                 <div class="card-inner">
                     <div class="card-front">Youth Development Partnerships</div>
                     <div class="card-back">Support grassroots programs that grow the sport nationwide.They Includes: Youth leagues and community programs, Coaching and referee training, Club development support and Women’s participation initiatives</div>
                 </div>
             </div>
-              <div class="card">
+              <div class="partner-card">
                 <div class="card-inner">
                     <div class="card-front">Equipment & Technical Partnerships</div>
                     <div class="card-back">Provide professional equipment and technology used in competitions.They Includes: Official tables and accessories, Venue lighting solutions and Broadcast and streaming technology</div>
@@ -394,19 +394,12 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
     <script>
-
-const cards = document.querySelectorAll(".card");
-
-cards.forEach(card => {
-
-    card.addEventListener("mouseenter", () => {
-
-        cards.forEach(c => c.classList.remove("active"));
-
-        card.classList.add("active");
-
+        const cards = document.querySelectorAll(".partner-card");
+        cards.forEach(card => {
+        card.addEventListener("mouseenter", () => {
+        cards.forEach(c => c.querySelector(".card-inner").classList.remove("active"));
+        card.querySelector(".card-inner").classList.add("active");
     });
-
 });
 
 </script>

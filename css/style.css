@@ -680,7 +680,7 @@ h6,
 
 /* card */
 
-.card{
+.partner-card{
     width:100%; 
     height:320px; 
     perspective:1000px; 
@@ -699,7 +699,7 @@ h6,
 
 /* when active flip */
 
-.card.active .card-inner{
+.card-inner .active{
     transform:rotateY(180deg);
 }
 
@@ -720,6 +720,9 @@ h6,
     backface-visibility:hidden;
 }
 
+.card-back {
+    transform: rotateY(180deg);
+}
 /* front style */
 
 .card-front{
@@ -737,6 +740,10 @@ h6,
     transform:rotateY(180deg);
     font-size:16px;
     line-height:1.6;
+}
+
+.partner-card:hover .card-inner {
+    transform: rotateY(180deg);
 }
 
 /* responsive */
